@@ -26,8 +26,8 @@ const Index = () => {
             >
               Start Your Journey
             </Button>
-            <Waitlist />
           </div>
+          <Waitlist />
         </div>
 
         {/* Blockchain Features Section */}
