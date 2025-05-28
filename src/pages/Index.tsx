@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Instagram } from "lucide-react";
@@ -81,15 +80,7 @@ const Index = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Join the revolution in creative property management and be part of the blockchain-powered future.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              className="bg-white text-purple-900 hover:bg-gray-100 font-semibold px-8 py-4 text-lg rounded-full transition-all duration-300"
-              onClick={() => window.open(googleFormLink, '_blank')}
-            >
-              Get Started Now
-            </Button>
-            <Waitlist />
-          </div>
+          <Waitlist />
         </div>
       </div>
 
