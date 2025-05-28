@@ -4,6 +4,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Instagram } from "lucide-react";
 
 const Index = () => {
+  const googleFormLink = "https://docs.google.com/forms/d/e/1FAIpQLSfCmLxgQopCFeLyocBAJc7V03NOc7WG5C9ySdyGrj0ptN6wdw/viewform";
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
       {/* Hero Section */}
@@ -15,7 +17,10 @@ const Index = () => {
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Revolutionize how you own, protect, and monetize your creative work with blockchain technology
           </p>
-          <Button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-8 py-4 text-lg rounded-full transition-all duration-300 transform hover:scale-105">
+          <Button 
+            className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-8 py-4 text-lg rounded-full transition-all duration-300 transform hover:scale-105"
+            onClick={() => window.open(googleFormLink, '_blank')}
+          >
             Start Your Journey
           </Button>
         </div>
@@ -72,10 +77,17 @@ const Index = () => {
             Join the revolution in creative property management and be part of the blockchain-powered future.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-white text-purple-900 hover:bg-gray-100 font-semibold px-8 py-4 text-lg rounded-full transition-all duration-300">
+            <Button 
+              className="bg-white text-purple-900 hover:bg-gray-100 font-semibold px-8 py-4 text-lg rounded-full transition-all duration-300"
+              onClick={() => window.open(googleFormLink, '_blank')}
+            >
               Get Started Now
             </Button>
-            <Button variant="outline" className="border-white text-white hover:bg-white hover:text-purple-900 font-semibold px-8 py-4 text-lg rounded-full transition-all duration-300">
+            <Button 
+              variant="outline" 
+              className="border-white text-white hover:bg-white hover:text-purple-900 font-semibold px-8 py-4 text-lg rounded-full transition-all duration-300"
+              onClick={() => window.open(googleFormLink, '_blank')}
+            >
               Learn More
             </Button>
           </div>
