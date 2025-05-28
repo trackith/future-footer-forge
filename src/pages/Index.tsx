@@ -5,6 +5,7 @@ import { Instagram } from "lucide-react";
 
 const Index = () => {
   const googleFormLink = "https://docs.google.com/forms/d/e/1FAIpQLSfCmLxgQopCFeLyocBAJc7V03NOc7WG5C9ySdyGrj0ptN6wdw/viewform";
+  const instagramLink = "https://www.instagram.com/trackith?igsh=MTg5MGt6aW03ano0Yg%3D%3D&utm_source=qr";
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
@@ -12,10 +13,10 @@ const Index = () => {
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Transform Your Creative Future
+            Transform Your Future with Trackith
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Revolutionize how you own, protect, and monetize your creative work with blockchain technology
+            Revolutionize how you own, protect, and monetize your creative work with blockchain technology. Earn money from all your streaming services as a content creator and track where and when your media is used by others.
           </p>
           <Button 
             className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-8 py-4 text-lg rounded-full transition-all duration-300 transform hover:scale-105"
@@ -83,13 +84,6 @@ const Index = () => {
             >
               Get Started Now
             </Button>
-            <Button 
-              variant="outline" 
-              className="border-white text-white hover:bg-white hover:text-purple-900 font-semibold px-8 py-4 text-lg rounded-full transition-all duration-300"
-              onClick={() => window.open(googleFormLink, '_blank')}
-            >
-              Learn More
-            </Button>
           </div>
         </div>
       </div>
@@ -108,8 +102,11 @@ const Index = () => {
           <p className="text-xl text-pink-100 mb-8 max-w-2xl mx-auto">
             Follow us for daily insights, behind-the-scenes content, and the latest updates on blockchain innovation in creative industries.
           </p>
-          <Button className="bg-white text-pink-600 hover:bg-pink-50 font-bold px-8 py-4 text-lg rounded-full transition-all duration-300 transform hover:scale-105">
-            Follow @YourHandle
+          <Button 
+            className="bg-white text-pink-600 hover:bg-pink-50 font-bold px-8 py-4 text-lg rounded-full transition-all duration-300 transform hover:scale-105"
+            onClick={() => window.open(instagramLink, '_blank')}
+          >
+            Follow @trackith
           </Button>
         </div>
       </div>
