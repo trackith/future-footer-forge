@@ -1,10 +1,11 @@
+
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { toast } from "@/components/ui/use-toast";
-import { Users, Eye } from "lucide-react";
+import { Users, Eye, FileText } from "lucide-react";
 
 const Waitlist = () => {
   const [email, setEmail] = useState('');
@@ -110,8 +111,8 @@ const Waitlist = () => {
           </div>
           <div className="text-center">
             <div className="flex items-center justify-center gap-2 text-pink-300 mb-2">
-              <Users size={20} />
-              <span className="text-sm font-medium">Waitlist Signups</span>
+              <FileText size={20} />
+              <span className="text-sm font-medium">Surveys Completed</span>
             </div>
             <div className="text-2xl font-bold text-white">{waitlistCount.toLocaleString()}</div>
           </div>
