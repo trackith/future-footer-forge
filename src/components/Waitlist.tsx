@@ -18,18 +18,29 @@ const Waitlist = () => {
     // Load existing data from localStorage
     const savedWaitlistCount = localStorage.getItem('trackith-waitlist-count');
     const savedPageViews = localStorage.getItem('trackith-page-views');
+    const hasVisitedBefore = localStorage.getItem('trackith-has-visited');
     
     if (savedWaitlistCount) {
       setWaitlistCount(parseInt(savedWaitlistCount));
     }
     
-    // Always increment page views on each visit
-    const currentPageViews = savedPageViews ? parseInt(savedPageViews) : 0;
-    const newPageViews = currentPageViews + 1;
-    setPageViews(newPageViews);
-    localStorage.setItem('trackith-page-views', newPageViews.toString());
+    // Load current page views
+    if (savedPageViews) {
+      setPageViews(parseInt(savedPageViews));
+    }
     
-    console.log('Page views updated:', newPageViews);
+    // Only increment if this is a first-time visitor
+    if (!hasVisitedBefore) {
+      const currentPageViews = savedPageViews ? parseInt(savedPageViews) : 0;
+      const newPageViews = currentPageViews + 1;
+      setPageViews(newPageViews);
+      localStorage.setItem('trackith-page-views', newPageViews.toString());
+      localStorage.setItem('trackith-has-visited', 'true');
+      
+      console.log('First-time visitor! Page views updated:', newPageViews);
+    } else {
+      console.log('Returning visitor, page views not incremented');
+    }
   }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
