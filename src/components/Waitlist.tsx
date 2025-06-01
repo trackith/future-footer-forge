@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -24,14 +23,13 @@ const Waitlist = () => {
       setWaitlistCount(parseInt(savedWaitlistCount));
     }
     
-    if (savedPageViews) {
-      setPageViews(parseInt(savedPageViews));
-    } else {
-      // Increment page views for new visit
-      const newPageViews = 1;
-      setPageViews(newPageViews);
-      localStorage.setItem('trackith-page-views', newPageViews.toString());
-    }
+    // Always increment page views on each visit
+    const currentPageViews = savedPageViews ? parseInt(savedPageViews) : 0;
+    const newPageViews = currentPageViews + 1;
+    setPageViews(newPageViews);
+    localStorage.setItem('trackith-page-views', newPageViews.toString());
+    
+    console.log('Page views updated:', newPageViews);
   }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
