@@ -17,7 +17,7 @@ const Index = () => {
             <img 
               src="/lovable-uploads/dce02ae3-b449-4ab9-9d26-ba2310b2d328.png" 
               alt="Trackith Logo" 
-              className="h-32 w-auto filter brightness-0 invert"
+              className="h-64 w-auto filter brightness-0 invert"
             />
           </div>
           
