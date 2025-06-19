@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Instagram } from "lucide-react";
@@ -13,6 +12,15 @@ const Index = () => {
       {/* Hero Section */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
+          {/* Logo */}
+          <div className="flex justify-center mb-8">
+            <img 
+              src="/lovable-uploads/dce02ae3-b449-4ab9-9d26-ba2310b2d328.png" 
+              alt="Trackith Logo" 
+              className="h-32 w-auto filter brightness-0 invert"
+            />
+          </div>
+          
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
             Transform Your Future with Trackith
           </h1>
